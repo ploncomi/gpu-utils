@@ -364,7 +364,8 @@ public:
             if (tokens.size() > 2)
             {
               gpu_pids_id_.push_back(std::stoi(tokens[1]));
-              gpu_pids_.push_back(std::stoi(tokens[2]));
+#warning PL gpu_pids_.push_back(std::stoi(tokens[2])); was used in earlier nvidia-smi versions
+              gpu_pids_.push_back(std::stoi(tokens[4]));  //gpu_pids_.push_back(std::stoi(tokens[2]));
             }
             else
             {
